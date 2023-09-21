@@ -1,0 +1,32 @@
+{
+  "name": "@kingdata/taro-plugin-platform-bmp",
+  "version": "3.6.16",
+  "description": "币安小程序平台插件",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "taro", "binance"
+  ],
+  "files": [
+    "index.js",
+    "dist",
+    "types"
+  ],
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "dependencies": {
+    "@tarojs/components": "3.6.16",
+    "@tarojs/service": "3.6.16",
+    "@tarojs/shared": "3.6.16"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "rollup": "^2.79.0",
+    "rollup-plugin-ts": "^3.0.2",
+    "typescript": "^4.7.4"
+  }
+}
