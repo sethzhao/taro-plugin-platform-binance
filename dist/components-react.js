@@ -1,47 +1,26 @@
-const View = 'view';
-const Icon = 'icon';
-const Progress = 'progress';
-const RichText = 'rich-text';
-const Text = 'text';
-const Button = 'button';
-const Checkbox = 'checkbox';
-const CheckboxGroup = 'checkbox-group';
-const Form = 'form';
-const Input = 'input';
-const Label = 'label';
-const Picker = 'picker';
-const PickerView = 'picker-view';
-const PickerViewColumn = 'picker-view-column';
-const Radio = 'radio';
-const RadioGroup = 'radio-group';
-const Slider = 'slider';
-const Switch = 'switch';
-const CoverImage = 'cover-image';
-const Textarea = 'textarea';
-const CoverView = 'cover-view';
-const MovableArea = 'movable-area';
-const MovableView = 'movable-view';
-const ScrollView = 'scroll-view';
-const Swiper = 'swiper';
-const SwiperItem = 'swiper-item';
-const Navigator = 'navigator';
-const Audio = 'audio';
-const Camera = 'camera';
-const Image = 'image';
-const LivePlayer = 'live-player';
-const Video = 'video';
-const Canvas = 'canvas';
-const Ad = 'ad';
-const WebView = 'web-view';
-const Block = 'block';
-const Map = 'map';
-const Slot = 'slot';
-const NativeSlot = 'native-slot';
-const CustomWrapper = 'custom-wrapper';
-
-// For React.createElement's type
-const DeprecatedInput = 'deprecated-input';
-const DeprecatedTextarea = 'deprecated-textarea';
-
-export { Ad, Audio, Block, Button, Camera, Canvas, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, DeprecatedInput, DeprecatedTextarea, Form, Icon, Image, Input, Label, LivePlayer, Map, MovableArea, MovableView, NativeSlot, Navigator, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, ScrollView, Slider, Slot, Swiper, SwiperItem, Switch, Text, Textarea, Video, View, WebView };
-//# sourceMappingURL=components-react.js.map
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatchTouch = exports.WebViewComponent = exports.Chart = exports.Editor = exports.RootPortal = exports.DeprecatedCanvas = exports.DeprecatedTextarea = exports.DeprecatedInput = void 0;
+__exportStar(require("@tarojs/components/mini"), exports);
+exports.DeprecatedInput = 'deprecated-input';
+exports.DeprecatedTextarea = 'deprecated-textarea';
+exports.DeprecatedCanvas = 'deprecated-canvas';
+exports.RootPortal = 'root-portal';
+exports.Editor = 'editor';
+exports.Chart = 'chart';
+exports.WebViewComponent = 'web-view-component';
+exports.CatchTouch = 'catch-touch';
