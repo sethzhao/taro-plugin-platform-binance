@@ -1,4 +1,4 @@
-import Weapp from './program'
+import Bmp from './program'
 
 import type { IPluginContext } from '@tarojs/service'
 
@@ -11,7 +11,7 @@ export default (ctx: IPluginContext, options: IOptions) => {
     name: 'bmp',
     useConfigName: 'mini',
     async fn ({ config }) {
-      const program = new Weapp(ctx, config, options || {})
+      const program = new Bmp(ctx, config, options || {})
       await program.start()
     }
   })

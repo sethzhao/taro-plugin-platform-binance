@@ -1,6 +1,6 @@
 {
-  "name": "@kingdata/taro-plugin-platform-bmp",
-  "version": "3.6.16",
+  "name": "taro-plugin-platform-binance",
+  "version": "0.0.1",
   "description": "币安小程序平台插件",
   "license": "MIT",
   "main": "index.js",

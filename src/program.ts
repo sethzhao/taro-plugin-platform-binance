@@ -8,43 +8,7 @@ import resolve from 'resolve'
 import path from 'path'
 
 
-class PostProcessPlugin {
-  apply(compiler: any) {
-    if (compiler.options.optimization.minimizer.length) {
-      compiler.options.optimization.minimizer[0].options.test =
-        /\.(b|m)?js(\?.*)?$/i
-    }
-
-    compiler.hooks.compilation.tap(
-      'post-process-plugin',
-      (compilation: any) => {
-        compilation.hooks.optimizeChunks.tap(
-          'modify-script-name',
-          (chunks: any) => {
-            const plugins = compilation.options.plugins.filter(
-              (p: any) => p.constructor.name === 'TaroMiniPlugin'
-            )
-            if (plugins.length) {
-              const miniPlugin = plugins[0]
-
-              const pageNames = [
-                ...miniPlugin.pages,
-                ...miniPlugin.components,
-              ].map((p) => p.name)
-              chunks.forEach((chunk: any) => {
-                if (pageNames.indexOf(chunk.name) >= 0) {
-                  chunk.filenameTemplate = '[name].js'
-                }
-              })
-            }
-          }
-        )
-      }
-    )
-  }
-}
-
-export default class Weapp extends TaroPlatformBase {
+export default class Bmp extends TaroPlatformBase {
   template: Template
   platform = 'bmp'
   globalObject = 'globalThis'
@@ -115,13 +79,6 @@ export default class Weapp extends TaroPlatformBase {
 
       chain.resolve.alias.set('@tarojs/components$', this.taroComponentsPath)
       chain.output.publicPath('')
-      chain.merge({
-        plugin: {
-          postProcessPlugin: {
-            plugin: PostProcessPlugin,
-          },
-        },
-      })
     })
   }
 }
